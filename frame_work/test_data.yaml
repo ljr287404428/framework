@@ -1,0 +1,19 @@
+data:
+  - appium
+  - selenium
+  - requests
+
+#{"data":["appium","selenium","requests"]}
+
+steps:
+  - webdriver:
+      browser: chrome
+  - get: https://ceshiren.com/
+  - find_element:
+      - id
+      - search-button
+  - click: []
+  - find_element:
+      - id
+      - search-term
+  - send_keys: ${data}
